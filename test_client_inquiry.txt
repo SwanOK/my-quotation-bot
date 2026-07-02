@@ -1,0 +1,8 @@
+
+        URGENT QUOTATION REQUEST
+        We need a price estimate for our production line cooling water loop.
+        Current flow metrics: 170 USGPM continuous cycle.
+        Temperatures needed: Entering tower at 40 C and leaving cooled down to 32 C.
+        Our structural location metrics require a design wet bulb reference ceiling of 28 C.
+        Ignore the footprint size we talked about over the phone yesterday.
+        

@@ -1,10 +1,11 @@
 # Ignore generated quotation PDFs
 *.pdf
 Quotation_*.pdf
+Final_Proposal_*.pdf
 
-# Ignore Python caches and temporary files
+# Ignore the master design template
+template.pdf
+
+# Ignore Python caches
 __pycache__/
 *.pyc
-
-# Ignore environment variables / secrets if you add any later
-.env
