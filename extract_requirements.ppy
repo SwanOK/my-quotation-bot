@@ -1,0 +1,25 @@
+import requests
+import json
+
+# Your prompt with "training" examples
+SYSTEM_PROMPT = """You are an AI that extracts variables from client requirement sheets into clean JSON format.
+Example: '50 units of Model A sent express' -> {"model": "Model A", "qty": 50, "shipping": "Express"}"""
+
+def extract_data(client_text):
+    url = "http://localhost:11434/api/generate"
+    payload = {
+        "model": "llama3:8b",
+        "prompt": f"{SYSTEM_PROMPT}\n\nExtract this: {client_text}",
+        "stream": False,
+        "format": "json" # Forces Llama3 to return valid JSON
+    }
+    
+    response = requests.post(url, json=payload)
+    return response.json()['response']
+
+# Test it locally
+if __name__ == "__main__":
+    sample_client_sheet = "Hey team, we need 30 of the Model B brackets and please ship them via standard ground."
+    result = extract_data(sample_client_sheet)
+    print("AI Extracted Data:")
+    print(result)
