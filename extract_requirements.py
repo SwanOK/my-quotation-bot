@@ -46,7 +46,7 @@ def extract_design_conditions(file_path):
         "stream": False,
         "format": "json"
     }
-    
+#important to add 
     try:
         response = requests.post(url, json=payload)
         return json.loads(response.json()['response'])
