@@ -83,5 +83,5 @@ def generate_result_pdf(input_file_path):
     print(f"📄 Success! Standalone file saved as: {output_filename}")
 
 if __name__ == "__main__":
-    # Point this to your test_client_inquiry.txt or any incoming inquiry PDF
+    # Point this to your test_client_inquiry.txt or any incoming inquiry 
     generate_result_pdf("test_client_inquiry.txt")
